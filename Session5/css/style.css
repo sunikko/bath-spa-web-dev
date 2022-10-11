@@ -1,0 +1,15 @@
+body {
+    margin: 50px 0px 0px 50px;
+    background-color: #e5c176;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+a {
+    text-decoration: none;
+}
+.primary-color {
+    color: rgb(248, 56, 8);
+}
+
+.secondary-color {
+    color: rgb(53, 14, 228);
+}
