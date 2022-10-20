@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex box
+container 에 속성값으로 아래 아이템들의 정렬을 담당한다
+similar like float:left/inline-lock; 
+*/
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: lightgrey;
+    /* flex-direction: row(default)/column/row-reverse/column-reverse; */
+    /* flex-wrap: overflow!! nowrap(default)/wrap/wrap-reverse/; */
+
+    /* order! 
+    justify-content: flex-start(default)/ flex-end/center/space-between/space-around: 지금 현재 축방향을 정렬해 주는 것;  가로 정렬
+    Align-items: stretch(default)flex-start/end/center/;  축의 방향을 알려 주는 것 */
+    justify-content: space-between;
+    /* align-items: flex-end; */
+    /* flex-wrap: wrap; */
+    /* align-content: space-around; */
+    /* 
+    align-content—> flex-wrap:wrap 이어야지만 한다!!
+    align-content: flex-start; flex-end; flex-center; space-between; space-around//strach 되지 않고 위로 붇는다 */
+}
+
+.item {
+    background: rgba(255, 0, 0, 0.5);
+    /* flex-grow: 1; //각각을 얼마큼의 비율로 늘어 나게 해줄꺼냐의 비율(flow-grow를 적용하기 전의 남는 여백을 나눠 갖는 의미임!)
+    flex-basis: auto(default); 0; //점유하는 공간을 0으로 줘서 전부다 여백으로 생각하게 하여 진짜 비율로 나눠 가기제 한다  */    
+    width: 10vw;
+    /* flex: auto; */
+}
+
+.item:nth-child(odd) {
+    background: rgba(255, 255, 0, 0.5);
+}
+
+.item:nth-child(1){
+	/* flex-grow: 1; //flex-basis: 0; 공통으로 줘야 한다
+    flex-shrink: 1
+	———————
+	flex:1; //진짜로 비율로 배열해 준다!! grow/shink 둘다 되는 것임 flex-basis: 0으로 알아서 세팅이 된다.  */
+    /* flex: 1; */
+    height: 30vh;
+    align-self: flex-start;
+    /* order: 3; */
+    /* justify-items: flex-start; */
+    
+}
+
+.item:nth-child(2){
+	/* flex-grow: 2;
+	———————
+	flex:2; */
+    /* flex: 2; */
+    height: 20vh;
+    align-self: flex-start;
+    /* justify-items: flex-end; */
+    /* justify-self: flex-end; */
+    /* margin-left: auto; */
+}
+
+.item:nth-child(3){
+	/* flex-grow: 1;
+	———————
+	flex:1; 기본적으로 플랙스 값을 주면 신축성있게 늘어났다 줄어 들었다 할 수 있다는 의미 임. */
+    /* flex: 1; */
+    height: 10vh;
+    align-self: center;
+    justify-items: center;
+    margin-left: 0;
+}
+
+.item:nth-child(4){
+	/* flex-grow: 1;
+	———————
+	flex:1; 기본적으로 플랙스 값을 주면 신축성있게 늘어났다 줄어 들었다 할 수 있다는 의미 임. */
+    /* flex: 1; */
+    align-self: flex-end;
+    height: 20vh;
+    /* justify-items: flex-start; */
+}
+
+.item:nth-child(5){
+	/* flex-grow: 1;
+	———————
+	flex:1; 기본적으로 플랙스 값을 주면 신축성있게 늘어났다 줄어 들었다 할 수 있다는 의미 임. */
+    /* flex: 1; */
+    height: 30vh;
+    align-self: flex-end;
+}
+/* 아이템을 각각 정렬하려면? */
+
