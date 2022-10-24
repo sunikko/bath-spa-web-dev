@@ -1,0 +1,62 @@
+body{
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: ;
+}
+
+.header{
+	display: flex;
+}
+
+nav{
+	width: 60%;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+nav ul li {
+	padding: 10%;
+	list-style: none;
+}
+
+
+
+.sideBar{
+	display: flex;
+	flex-direction: column;
+	height: 20%;
+	width: 20%;
+}
+
+.sideBar ul{
+	width: 100%;
+}
+
+.sideBar ul li{
+	width: 100%;
+    list-style: none;
+}
+
+.main {
+	width: 70%;
+    display: inline-flex;
+}
+
+.left {
+	flex-direction: column;
+	width: 50%;
+}
+button{
+	width: 10%;
+	height: 5%;
+}
+h3{
+	width: 20%
+}
