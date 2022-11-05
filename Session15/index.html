@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="container">
+        <ul class="operators list-unstyled d-flex justify-content-center">
+            <input type="text" name="input" id="input">
+            <input type="text" name="input-plus" id="input-plus">
+        </ul>
+        <ul class="operators list-unstyled d-flex justify-content-center">   
+            <li><button id="multiply" class="btn" onclick="addInput(this)">*</button></li>
+            <li><button id="divide" class="btn" onclick="addInput(this)">/</button></li>
+            <li><button id="minus" class="btn" onclick="addInput(this)">-</button></li>
+            <li><button id="plus" class="btn" onclick="addInput(this)">+</button></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li><button class="btn" onclick="addInput(this);">.</button></li>
+            <li><button class="btn" onclick="addInput(this);">9</button></li>
+            <li><button class="btn" onclick="addInput(this);">8</button></li>
+            <li><button class="btn" onclick="addInput(this);">7</button></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li><button class="btn" onclick="addInput(this);">6</button></li>
+            <li><button class="btn" onclick="addInput(this);">5</button></li>
+            <li><button class="btn" onclick="addInput(this);">4</button></li>
+            <li><button class="btn" onclick="addInput(this);">3</button></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li><button class="btn" onclick="addInput(this);">2</button></li>
+            <li><button class="btn" onclick="addInput(this);">1</button></li>
+            <li><button class="btn" onclick="addInput(this);">0</button></li>
+            <li><button class="btn" onclick="addInput(this);">=</button></li>
+        </ul>
+        <ul class="list-unstyled d-flex justify-content-center">
+            <li><button class="btn" onclick="addInput(this);">C</button></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <script src="./functioin.js"></script>
+</body>
+</html>
