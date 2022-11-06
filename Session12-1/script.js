@@ -24,10 +24,11 @@ const btn = document.getElementsByClassName("btn");
 
 for(let i=0; i < btn.length; i++){
     btn[i].addEventListener("click", () => {
-        let _id = "." + btn[i].id + "-item";
         if(btn[i].id == 'home')
             showAllItmes();
-        else
+        else{
+            let _id = "." + btn[i].id + "-item";
             filterItems(_id);
+        }
     });
 }
