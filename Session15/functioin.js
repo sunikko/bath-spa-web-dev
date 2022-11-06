@@ -8,25 +8,12 @@ const inputClear = (btnText) => {
     input.value = '';
     inputplus.value = '';
 }
-const inputPlus = (btnText) => {
+const inputCalculator = (btnText) => {
     input_A = parseFloat(input.value);
     console.log(input_A);
     inputplus.value = input_A + btnText;
     input.value = '';
     input_operator = btnText;
-}
-const inputMinus = (btnText) => {
-    input_A = parseFloat(input.value);
-    console.log(input_A);
-    inputplus.value = input_A + btnText;
-    input.value = '';
-    input_operator = btnText;
-}
-const inputMultiply = (btnText) => {
-
-}
-const inputDivide = (btnText) => {
-
 }
 const inputResult = (btnText) => {
     input_B = parseFloat(input.value);
@@ -34,17 +21,17 @@ const inputResult = (btnText) => {
     console.log(input_A + input_B);
     switch(input_operator){
         case '+':
-            input.value = input_A + input_B;
+            input.value = (input_A + input_B).toPrecision(6);
             break;
         case '-':
-            input.value = (input_A - input_B).toPrecision(6);; //Math.round
+            input.value = (input_A - input_B).toPrecision(6); //Math.round
             break;
         case '*':
-            input.value = input_A * input_B;
+            input.value = (input_A * input_B).toPrecision(6);
             break;
         case '/':
-        input.value = input_A / input_B;
-        break;
+            input.value = (input_A / input_B).toPrecision(6);
+            break;
     }
 }
 
@@ -53,17 +40,16 @@ const calculationMap = {
         inputClear(btnText);
     },
     plus(btnText){
-        inputPlus(btnText);
+        inputCalculator(btnText);
     },
     minus(btnText){
-        alert("-");
-        inputMinus(btnText);
+        inputCalculator(btnText);
     },
     multiply(btnText){
-        inputMultiply(btnText);
+        inputCalculator(btnText);
     },
     divide(btnText){
-        inputDivide(btnText);
+        inputCalculator(btnText);
     },
     result(btnText){
         inputResult(btnText);
@@ -83,11 +69,19 @@ const executeInput = (elem) => {
     var btnText = elem.textContent || elem.innerText;
     console.log(btnText);    
     if(isNaN(btnText) && '.' != btnText){
-        //alert(calculationMap['minus']);
         calculationMap[operatorMap[btnText]](btnText);
     }else{
         input.value += btnText;
     }
+}
+
+
+const btn = document.getElementsByClassName("btn");
+
+for(let i=0; i < btn.length; i++){
+    btn[i].addEventListener("click", () => {
+        executeInput(btn[i]); 
+    });
 }
 
 /*
