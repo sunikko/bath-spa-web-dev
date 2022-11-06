@@ -1,0 +1,14 @@
+ul li {
+    margin-right: 0.5em;
+}
+
+ul li img {
+    width: 4em;
+}
+
+.main ul li {
+    margin-right: 0;
+    background-color: white;
+    width: 20%;
+}
+
