@@ -1,11 +1,19 @@
-const filterItems = (type) => {
+const showAllItmes = () => {
     const _items = document.querySelectorAll(".item");
     for (let i=0; i<_items.length; i++){
-        if(type == ".home-item")
-            _items[i].style.display = "block";
-        else
-            _items[i].style.display = "none";
+        _items[i].style.display = "block";     
     }
+}
+
+const hideAllItems = () => {
+    const _items = document.querySelectorAll(".item");
+    for (let i=0; i<_items.length; i++){
+        _items[i].style.display = "none";
+    }
+}
+
+const filterItems = (type) => {
+    hideAllItems();
     const filtered_items = document.querySelectorAll(type);
     for (let i=0; i<filtered_items.length; i++){
         filtered_items[i].style.display = "block";
@@ -17,6 +25,9 @@ const btn = document.getElementsByClassName("btn");
 for(let i=0; i < btn.length; i++){
     btn[i].addEventListener("click", () => {
         let _id = "." + btn[i].id + "-item";
-        filterItems(_id);
+        if(btn[i].id == 'home')
+            showAllItmes();
+        else
+            filterItems(_id);
     });
 }
