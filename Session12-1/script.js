@@ -20,7 +20,7 @@ const filterItems = (type) => {
     }
 }
 
-const btn = document.getElementsByClassName("btn");
+const btn = document.querySelectorAll(".btn");
 
 for(let i=0; i < btn.length; i++){
     btn[i].addEventListener("click", () => {
